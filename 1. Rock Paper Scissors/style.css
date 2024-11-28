@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #12192c, #1a2b47);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2 {
+  margin: 20px 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #4ed3f7, #00c8ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1s ease-in-out;
+}
+
+span {
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+button {
+  background: linear-gradient(45deg, #003a8a, #0056d6);
+  color: #d0e8ff;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.4s, color 0.3s;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #002e6e, #004fa8);
+  color: #ffffff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+button:active {
+  transform: scale(0.95);
+  background: linear-gradient(45deg, #00254f, #003c76);
+  color: #b0d8f8;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  }
+}
+
+button:hover {
+  animation: buttonPulse 1s infinite;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .left {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right {
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

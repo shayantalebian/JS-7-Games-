@@ -14,4 +14,4 @@ These games are:
 
 These games are written in Vanilla JavaScript and the main source for this project is [This Video](https://www.youtube.com/watch?v=ec8vSKJuZTk&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V&index=5).
 
-The Whole idea of this project is to learn JS by buildinig simple to advanced JS games.
+The Whole idea of this project is to learn JS by building simple to advanced JS games.
